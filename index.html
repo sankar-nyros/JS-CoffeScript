@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+		
+		<link rel="shortcut icon" href="bootstrap/img/logo.jpeg">
+		
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   
+    	<!-- Bootstrap -->
+        
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">		
+		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">		
+		<link href="bootstrap/css/style.css" rel="stylesheet" media="screen">
+
+		<script src="bootstrap/js/jquery.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>	
+		<script type="text/coffeescript" src="bootstrap/js/coffeeValid.coffee"></script>
+		<script src="bootstrap/js/coffee-script.js"></script>
+
+	<!-- End of Bootstrap -->
+	</head>
+	<body> 
+	
+		<div class="container">
+		
+		<!-- Header -->
+			
+			<header>
+				<div class="row">
+					<div class="span12">
+   						<img src="bootstrap/img/banner.jpeg" width="100%" height="100%"/>
+					</div>
+				</div>
+			</header>
+		
+		<!-- End of Header -->
+		
+		<!-- Body -->
+			<section>
+				<div class="row">					
+					<div class="span12 center">
+						<h4>How much registration is completed</h4>
+						<progress max="10" value="1" id="progress"></progress> <span id="percent" style="font-size:20px;">10%</span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span12">
+						<div class = "span1"></div>
+							<div class = "span9">
+								<div class="alert alert-success" id="SuccessMsg" style="display:none;font-size:20px;margin-top:20px;">
+						    	<button type="button" class="close" data-dismiss="alert">&times;</button>
+						    	<strong>Success!</strong> You are successfully completed registartion.
+							</div>
+						
+							<form class="form-horizontal" name="reg" id="reg">
+								<fieldset class="fieldset">
+									<legend>Account Information</legend>
+									<div class="control-group">
+							    		<label class="control-label" for="username">User Name</label>
+							    		<div class="controls">
+							    			<input type="text" name ="UserName" class="left" id="inputName" maxlength="8" placeholder="UserName" 
+							    			        onfocus="document.getElementById('UserInfo').style.display='block';"
+							    			        onblur="document.getElementById('UserInfo').style.display='none'">
+							    			<span id="UserMsg" class="NameMsg"></span>
+							    			<span class = "HideInfo" id="UserInfo"><img src="bootstrap/img/information.png" />Please Enter Alphanumeric Letters Only</br>User Name must not be less than 5 letters</span>
+							    		</div>
+							    	</div>
+							    	
+							    	<div class="control-group">
+							    		<label class="control-label" for="Password">Password</label>
+							    		<div class="controls">
+							    			<input type="password" name="Password" class="left" id="inputPassword" maxlength="6" placeholder="Password"
+							    					onfocus="document.getElementById('PasswordInfo').style.display='block';"
+							    			        onblur="document.getElementById('PasswordInfo').style.display='none'">
+							    			<span id="PasswordMsg" class="NameMsg"></span>
+							    			<span class = "HideInfo" id="PasswordInfo"><img src="bootstrap/img/information.png" />Please Enter Alphanumeric Letters Only</span>
+							    		</div>
+							    	</div>
+								</fieldset>
+								
+								<fieldset class="fieldset">
+									<legend>Profile Information</legend>
+									<div class="control-group">
+							    		<label class="control-label" for="Firstname">First Name</label>
+							    		<div class="controls">
+							    			<input type="text" name="FirstName" class="left" id="inputFirstName" maxlength="6" placeholder="First Name" 
+							    			onfocus="document.getElementById('fNameInfo').style.display='block';"
+							    			onblur="document.getElementById('fNameInfo').style.display='none'">
+							    			<span id="FirstNameMsg" class="NameMsg"></span>
+							    			<span class = "HideInfo" id="fNameInfo"><img src="bootstrap/img/information.png" />First Name must not be less than 2</span>
+							    		</div>
+							    	</div>
+							    	
+						    		<div class="control-group">
+							    		<label class="control-label" for="LastName">Last Name</label>
+							    		<div class="controls">
+							    			<input type="text" class="left" name="LastName" id="inputLastName" maxlength="15" placeholder="Last Name" 
+							    			onfocus="document.getElementById('lNameInfo').style.display='block';"
+							    			onblur="document.getElementById('lNameInfo').style.display='none'">
+							    			<span id="LastNameMsg" class="NameMsg"></span>
+							    			<span class = "HideInfo" id="lNameInfo"><img src="bootstrap/img/information.png" />Last Name must not be less than 2</span>
+							    		</div>
+							    	</div>
+							    	
+							    	<div class="control-group">
+							    		<label class="control-label" for="Profile pic">Profile Pic</label>
+							    		<div class="controls">
+							    			<input type="file" id="inputFile" placeholder="Profile pic" accept="image/*" class="left">
+							    			<span id="ProfileMsg" class="NameMsg"></span>
+							    		</div>
+							    	</div>
+							    	
+							    	<div class="control-group">
+							    		<label class="control-label" for="Gender">Gender</label>
+							    		<div class="controls">
+											<input type="radio" name="Gender" id="male" value="Male" title="Male" checked> Male
+											<input type="radio" name="Gender" id="female" value="Female" title="Female"> Female			    			
+							    		</div>
+							    	</div>
+							    	
+							    	
+							    	<div class="control-group">
+							    		<label class="control-label" for="DOB">Date Of Birth</label>
+							    		<div class="controls">
+											<select title="Select Date" class="left" id="Date" name="Date">
+												<option title="Select date" SELECTED >-- Date --</option>
+												<option>1</option><option>2</option><option>3</option><option>4</option>
+												<option>5</option><option>6</option><option>7</option><option>8</option>
+												<option>9</option><option>10</option><option>11</option><option>12</option>
+												<option>13</option><option>14</option><option>15</option><option>16</option>
+												<option>17</option><option>18</option><option>19</option><option>20</option>
+												<option>21</option><option>22</option><option>23</option><option>24</option>
+												<option>25</option><option>26</option><option>27</option><option>28</option>
+												<option>29</option><option>30</option><option>31</option>
+											</select>
+											
+											<select title="Select Month" class="left" id="Month" name="Month">
+												<option title="Select month" SELECTED >-- Month --</option>
+												<option title="January"> January</option>
+												<option title="February"   >February</option>
+												<option title="March"  >March</option>
+												<option title="April" >April</option>
+												<option title="May"  >May</option>
+												<option title="June" >June</option>
+												<option title="July"  >July</option>
+												<option title="August" >August</option>
+												<option title="September" >September</option>
+												<option title="October"  >October</option>
+												<option title="November">November</option>
+												<option title="December">December</option>
+											</select>
+											<select title="Select Year" class="left" id="Year" name="Year">
+												<option title="Select Year" SELECTED >-- Year --</option>
+												<option>2000</option><option>2001</option><option>2002</option><option>2003</option>
+												<option>2004</option><option>2005</option><option>2006</option><option>2007</option>
+												<option>2008</option><option>2009</option><option>2010</option><option>2011</option>
+												<option>2012</option><option>2013</option><option>2014</option>
+											</select>
+											<span id="DOBMsg" class="NameMsg"></span>
+										</div>
+									</div>
+									
+									<div class="control-group">
+							    		<label class="control-label" for="Hobbies">Hobbies</label>
+							    		<div class="controls">
+											<p class="left"><input type="checkbox" id="h1"> Singing
+											<input type="checkbox" id="h2"> Traveling
+											<input type="checkbox" id="h3"> Dancing
+											<input type="checkbox" id="h4"> Gardening
+											<input type="checkbox" id="h5"> Others</p>	
+											
+											<span id="HobbiesMsg" class="NameMsg"></span>		    			
+							    		</div>
+							    	</div>
+							    	
+							    	<div class="control-group">
+							    		<label class="control-label" for="Country">Have been to</label>
+							    		<div class="controls">
+											<select title="Select Country" multiple="multiple" size="4" class="left" id="Country" name="Country">
+												<option SELECTED>-- Country --</option>
+												<option >Afghanistan</option>
+							                    <option >Australia</option>
+							                    <option >Bangladesh</option>
+							                    <option >Bhutan</option>
+							                    <option >Brazil</option>
+							                    <option >Canada</option>
+							                    <option >China</option>
+							                    <option >Egypt</option>
+                  								<option >France</option>
+							                    <option >Greece</option>
+							                    <option >India</option>
+							                    <option >Indonesia</option>
+							                    <option >Iran</option>
+							                    <option >Iraq</option>
+							                    <option >Italy</option>
+							                    <option >Malaysia</option>
+							                    <option >Nepal</option>
+							                    <option >Netherlands</option>
+							                    <option >New Zealand</option>
+							                    <option >Pakistan</option>
+							                    <option >Russia</option>
+							                    <option >South Africa</option>
+							                    <option >Sri Lanka</option>
+							                    <option >Switzerland</option>
+							                    <option >United Kingdom</option>
+							                    <option >United States</option>
+											</select>	    			
+											<span id="CountryMsg" class="NameMsg"></span>
+							    		</div>
+							    	</div>
+									</fieldset>
+									
+									<fieldset class="fieldset">
+										<legend>Contact Information</legend>
+										<div class="control-group">
+							    			<label class="control-label" for="phone">Phone</label>
+							    			<div class="controls">
+							    				<input type="text" name="Phone" id="inputPhone" placeholder="Mobile Number" class="left"
+							    					onfocus="document.getElementById('PhoneInfo').style.display='block';"
+							    			        onblur="document.getElementById('PhoneInfo').style.display='none'">
+							    				<span id="MobileMsg" class="NameMsg"></span>
+							    				<span class = "HideInfo" id="PhoneInfo"><img src="bootstrap/img/information.png" />Phone No Format: +91 (990)-824-7888</span>
+							    			</div>
+							    		</div>
+							    		
+							    		<div class="control-group">
+							    			<div class="controls">
+							    				<input type="submit" id="Submit" class="btn btn-large btn-primary" value="Submit">		
+							    			</div>
+							    		</div>
+								</fieldset>
+						
+							
+							</form>
+						</div>
+						<div class = "span1"></div>	
+					</div>
+				</div>
+			</section>
+		<!-- End of Body -->
+		
+		<!-- Footer -->
+			<footer>
+				<div class="row">
+					<div class="span12">
+						<img src="bootstrap/img/footerbanner.jpeg" width="100%" height="100%"/>
+					</div>
+				</div>
+			</footer>
+		<!-- End of Footer -->
+		
+		</div>  <!-- End of Container -->
+		<script language="coffeescript" type="text/coffeescript"> 
+### VALIDATINS ###
+$ ->
+    $('#reg').submit ->
+       Validations()
+
+Validations = ->
+  UserCheck = UserNameValid()
+  PasswordCheck = PasswordValid()
+  FNameCheck = FirstNameValid()
+  LNameCheck = LastNameValid()
+  ProfpicCheck = ProfileValid()
+  DOBCheck = DOBValid()
+  HobbiesCheck = HobbiesValid()
+  MobileCheck = MobileValid()
+  CountryCheck = CountryValid()
+  if UserCheck is true and PasswordCheck is true and FNameCheck is true and LNameCheck is true and ProfpicCheck is true and DOBCheck is true and HobbiesCheck is true and MobileCheck is true and CountryCheck is true
+    $("#SuccessMsg").css("display" , "block")
+    false
+  else
+    false
+
+###******************USERNAME VALIDATION ******************###
+
+$("#inputName").bind "blur", ->
+  UserNameValid()
+
+UserNameValid = ->
+  Name = $("#inputName").val()
+  AlphaNumPatt = /^[0-9A-z]+$/
+  if Name.length >= 5
+    if AlphaNumPatt.test(Name)
+       success "UserMsg"
+    else
+       error "UserMsg"
+  else
+       error "UserMsg"
+
+###******************PASSWORD VALIDATION ******************###
+
+$("#inputPassword").bind "blur", ->
+   PasswordValid()
+
+PasswordValid = ->
+  Password = $("#inputPassword").val()
+  AlphaNumPatt = /^[0-9A-z]+$/
+  if AlphaNumPatt.test(Password)
+       success "PasswordMsg"
+  else
+       error "PasswordMsg"
+ 
+###**********FIRSTNAME VALIDATION ****************###
+
+$("#inputFirstName").bind "blur", ->
+   FirstNameValid()
+
+FirstNameValid = ->
+  fName = $("#inputFirstName").val()
+  if fName.length < 2
+    error "FirstNameMsg"
+  else
+    success "FirstNameMsg"
+
+###***************LASTNAME VALIDATION *******###
+
+$("#inputLastName").bind "blur", ->
+   LastNameValid()
+
+LastNameValid = ->
+  lName = $("#inputLastName").val()
+  if lName.length < 2
+    error "LastNameMsg"
+  else
+    success "LastNameMsg"
+
+###***********DOB VALIDATION ************###
+
+$("#Date").on "change", ->
+  DOBValid()
+$("#Month").on "change", ->
+  DOBValid()
+$("#Year").on "change", ->
+  DOBValid()
+
+DOBValid = ->
+  selectDate = $("#Date").val()
+  selectMonth = $("#Month").val()
+  selectYear = $("#Year").val()
+
+  if `selectDate == "-- Date --"` or `selectMonth == "-- Month --"` or `selectYear == "-- Year --"`
+    error "DOBMsg"
+  else
+    success "DOBMsg"
+
+###************HOBBIES VALIDATION *************###
+
+$("#h1").on "change", ->
+  HobbiesValid()
+$("#h2").on "change", ->
+  HobbiesValid()
+$("#h3").on "change", ->
+  HobbiesValid()
+$("#h4").on "change", ->
+  HobbiesValid()
+$("#h5").on "change", ->
+  HobbiesValid()
+
+HobbiesValid = ->
+  hob1 = $("#h1").prop('checked')
+  hob2 = $("#h2").prop('checked')
+  hob3 = $("#h3").prop('checked')
+  hob4 = $("#h4").prop('checked')
+  hob5 = $("#h5").prop('checked')
+  if hob1 is true or hob2 is true or hob3 is true or hob4 is true or hob5 is true
+    success "HobbiesMsg"
+  else
+    error "HobbiesMsg"
+
+###******************PROFILEPIC VALIDATION **************###
+
+$("#inputFile").on "change", ->
+  ProfileValid()
+
+ProfileValid = ->
+  pic = $("#inputFile").val()
+  if not pic? or pic is ""
+    error "ProfileMsg"
+  else
+    success "ProfileMsg"
+
+###************************PHONE VALIDATION *********************###
+
+$("#inputPhone").bind "blur", ->
+  MobileValid()
+
+MobileValid = ->
+  Phone = $("#inputPhone").val()
+  MobPatt = /^([+][0-9]\d{1}) ([(][0-9]\d{2}[)])-([0-9]\d{2})-([0-9]\d{3})$/
+  if MobPatt.test(Phone)
+    success "MobileMsg"
+  else
+    error "MobileMsg"
+
+
+###***********COUNTRY VALIDATION ***********###
+
+$("#Country").bind "blur", ->
+  CountryValid()
+
+CountryValid = ->
+  Country = $("#Country").val()
+  
+  if `Country == "-- Country --"`
+    error "CountryMsg"
+  else
+    success "CountryMsg"
+
+
+###*************************** SUCCESS AND ERROR ***************************####
+
+success = (id) -> 
+  clsName =  $("#"+id).prop("className")
+  $("#"+id).attr('class', 'success');
+  ProgressInc() unless clsName is "success"
+  true
+
+error = (id) ->
+  clsName =  $("#"+id).prop("className")
+  $("#"+id).attr('class', 'error');
+  ProgressDec()  if clsName isnt "error" and clsName isnt "NameMsg"  
+  false
+
+
+###****************************** PROGRESS BAR ********************************###
+
+ProgressInc = ->
+  pb = $("#progress").val()
+  $("#progress").val(pb + 1)
+  $("#percent").text((pb + 1) * 10 + "%")
+
+
+ProgressDec = ->
+  pb = $("#progress").val()
+  $("#progress").val(pb - 1)
+  $("#percent").text((pb - 1) * 10 + "%")
+
+
+		</script>
+	</body>	
+</html>

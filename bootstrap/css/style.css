@@ -1,0 +1,96 @@
+
+section .span12
+{
+	background-color:#f1f1f1;
+	font-size:15px;	
+	background-image:url('../img/background2.jpeg');
+	
+}
+
+fieldset 
+{
+	border: 2px solid black;
+	padding: 0 1.4em 1.4em 1.4em;
+	margin: 0 0 1.5em 0;
+    	border-radius:30px;
+	background-color:white;
+	font-size:15px;
+}
+
+legend 
+{
+	font-size: 1.2em;
+	padding-bottom:20px;
+	font-weight: bold;
+	color:white;
+}
+
+progress
+{
+	width:400px;
+	height:25px;
+}
+
+.center
+{
+	text-align:center;
+	color:white;
+}
+
+
+
+/************** SILK ICONS ******************/
+#inputName
+{
+  background-image:url(../img/user.png); 
+  background-position:left; 
+  background-repeat:no-repeat; 
+  padding-left:17px;
+}
+
+#inputPhone
+{
+  background-image:url(../img/telephone.png); 
+  background-position:left; 
+  background-repeat:no-repeat; 
+  padding-left:20px;
+}
+
+
+/*************************************************/
+
+select
+{
+	width:100px;
+}
+
+.success
+{
+	background:url("../img/accept.png"); 
+	width:16px; 
+	height:16px;
+	display:block;
+	float:left;
+}
+
+.error
+{
+	background:url("../img/cancel.png");
+	width:16px; 
+	height:16px;
+	display: block;
+	float:left;
+}
+
+.left
+{
+	float:left
+}
+
+.HideInfo
+{
+	display:none;
+	margin-left:250px;
+	font-size:15px;
+	color:grey;
+}
